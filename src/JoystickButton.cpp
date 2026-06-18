@@ -1,5 +1,5 @@
 
-#include "JoystickProtocol.h"
+#include "JoystickButton.h"
 #include "Arduino.h"
 
 
@@ -79,9 +79,11 @@ int Y = analogRead(_VRY_PIN);
         if (_item_selected < 0) { // if first item was selected, jump to last item
           _item_selected = _NUM_ITEMS-1;
           delay(650);
+          }
     break;
-      }
+      
   }
+ }
   // unclicks if no longer held
   else if ((_button_up_clicked == 1) && (Y<700)) {
     _button_up_clicked = 0;
@@ -145,7 +147,7 @@ if ((_button_down_clicked == 1) && (X<300)) {
     _button_down_clicked = 0;
 }
 
-
+}
 int JoyButton::ItemSelected() {
 
 return _item_selected;
@@ -169,4 +171,4 @@ return analogRead(_VRY_PIN);
 
 }
 
- }
+ 
