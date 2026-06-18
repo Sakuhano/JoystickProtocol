@@ -1,14 +1,14 @@
-#ifndef Joystick_Protocool_h
-#define Joystick_Protocol_h
+#ifndef Joystick_Button_h
+#define Joystick_Button_h
 
 
 #include "Arduino.h"
-include <ezButton.h>
+#include <ezButton.h>
 
-class 
+class JoyButton
 {
   public:
-    JoystickProtocol(int VRXY_PIN, int SW_PIN, int NUM_ITEMS);
+    JoyButton(int VRX_PIN, int VRY_PIN, int SW_PIN, int NUM_ITEMS)
     void  setup();
     void update();
     
@@ -16,10 +16,11 @@ class
     int CurrentScreen();
 
     int readX();
-    int read();
+    int readY();
 
   private:
-    int _VRXY_PIN;
+    int _VRY_PIN;
+    int _VRX_PIN;
     int _SW_PIN;
     int _NUM_ITEMS;
     
