@@ -3,7 +3,7 @@
 #include "Arduino.h"
 
 
-JoyButton::JoyButton(int VRX_PIN, int VRY_PIN, int SW_PIN, int NUM_ITEMS)
+JoyButton::JoyButton(int VRX_PIN, int VRY_PIN, int SW_PIN, int NUM_ITEMS);
 :  _button(SW_PIN)
 {
    _VRX_PIN = VRX_PIN;
