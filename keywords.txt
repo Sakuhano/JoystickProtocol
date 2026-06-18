@@ -1,0 +1,7 @@
+JoystickProtocol KEYWORD1
+setup   KEYWORD2
+update  KEYWORD2
+ItemSelected KEYWORD2
+CurrentScreen KEYWORD2
+readX KEYWORD2
+ready KEYWORD2
