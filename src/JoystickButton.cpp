@@ -50,7 +50,7 @@ Serial.println(digitalRead((_SW_PIN)));
     if ((digitalRead(_SW_PIN) == LOW) && (_button_select_clicked == 0)) { // select button clicked, jump between screens
      _button_select_clicked = 1; // set button to clicked to only perform the action once
      if (_current_screen == 0) {_current_screen = 1;} // menu items screen --> screenshots screen
-      else if (_current_screen == 1) {_current_screen = 2;} // screenshots screen --> qr codes screen
+      else if (_current_screen == 1) {_current_screen = 0;} // screenshots screen --> qr codes screen
      else {_current_screen = 0;} // qr codes screen --> menu items screen 
   }
     // TODO do something here
